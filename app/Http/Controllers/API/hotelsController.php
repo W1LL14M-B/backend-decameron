@@ -12,8 +12,6 @@ class hotelsController extends Controller
     public function get()
     {
 
-        $city = $request->query('city');
-        $hotels = $city ? Hotel::where('city', $city)->get() : Hotel::all();
     
         try {
             $data = hotels::get();
